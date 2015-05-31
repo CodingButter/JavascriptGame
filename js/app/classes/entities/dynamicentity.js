@@ -20,7 +20,7 @@ define(['entity'],function(Entity){
 				this.children.forEach(function(child){
 					if(typeof child.draw != "undefined")child.draw();
 				});
-			}
+			};
 			//push drawChild function into the drawfunc array that it loops through each frame
 			this.drawfuncs.push("drawChildren");
 			

@@ -7,12 +7,6 @@ require(['jquery','entity','dynamicentity'],function($,Entity,DynamicEntity){
 	workspace.name = "workspace";
 	$("body").append(workspace.element);
 	
-	var staticblock = new DynamicEntity();
-	staticblock.x = staticblock.y = 200;
-	staticblock.background = "yellow";
-	staticblock.speed = 3;
-	workspace.addChild(staticblock);
-	
 	var box = new DynamicEntity();
 	workspace.addChild(box);
 	setInterval(draw,12);
