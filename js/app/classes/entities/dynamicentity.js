@@ -14,22 +14,22 @@ define(['entity'],function(Entity){
 			this.speed = 4;
 			
 			//draw function array
-			this.drawfuncs = [];
+			this.updatefuncs = [];
 			
-			this.drawChildren = function(){
+			this.updateChildren = function(dt){
 				this.children.forEach(function(child){
-					if(typeof child.draw != "undefined")child.draw();
+					if(typeof child.update !== "undefined")child.update(dt);
 				});
 			};
 			//push drawChild function into the drawfunc array that it loops through each frame
-			this.drawfuncs.push("drawChildren");
+			this.updatefuncs.push("updateChildren");
 			
 			//Creat the draw function which will run each frame
-			this.draw = function(){
-				this.drawfuncs.forEach(function(_func){
-					_this[_func]();
+			this.update = function(dt){
+				this.updatefuncs.forEach(function(_func){
+					_this[_func](dt);
 				});
-			}
+			};
 			
 			this.moveleft = function(){this.x-=this.speed;}
 			this.moveright = function(){this.x+=this.speed;}

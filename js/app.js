@@ -1,6 +1,7 @@
 requirejs.config({
 	"baseUrl":"js",
 	"paths":{
+		"underscore":"libs/underscore",
 		"baseclass":"libs/baseclass",
 		"class":"libs/class",
 		"keylistener":"libs/keylistener",
@@ -9,7 +10,11 @@ requirejs.config({
 		"webaudio":"libs/webaudio",
 		"entity":"app/classes/entities/entity",
 		"dynamicentity":"app/classes/entities/dynamicentity",
-		"gravity":"app/classes/entities/helpers/gravity"
+		"player":"app/classes/entities/player",
+		"mouse":"app/classes/display/mouse",
+		"renderer":"app/classes/display/renderer",
+		'movers':"app/classes/entities/movers",
+		"physics":"app/classes/display/physics"
 	}
 });
 
